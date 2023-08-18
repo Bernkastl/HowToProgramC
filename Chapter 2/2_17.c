@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     // A
     printf("1 2 3 4\n");
