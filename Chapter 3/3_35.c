@@ -26,7 +26,7 @@ int main(void)
     num /= 10;
     int d4 = num % 10;
     num /= 10;
-    int d5 = num % 16;
+    int d5 = num % 10;
 
     printf("The decimal representation of this number is: %d", d1 * 1 + d2 * 2 + d3 * 4 + d4 * 8 + d5 * 16);
     return 0;
