@@ -69,9 +69,24 @@ int main(void)
     printf("F: %d\n", fCount);
 
     int totalCount = aCount + bCount + cCount + dCount + fCount;
-    float average = (float) totalGrades / totalCount;
+    float average = (float)totalGrades / totalCount;
 
-    printf("The average score of the class is: %.2f", average);
+    if (average > 3.4)
+    {
+        printf("Average grade is A\n");
+    }
+    else if (average > 2.4)
+    {
+        printf("Average grade is B\n");
+    }
+    else if (average > 1.4)
+    {
+        printf("Average grade is C\n");
+    }
+    else if (average > 0.4)
+    {
+        printf("Average grade is D\n");
+    }
 
     return 0;
 }
