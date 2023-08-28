@@ -49,6 +49,16 @@ int main(void)
             printf("%s", "Incorrect letter grade entered."); 
             puts(" Enter a new grade.");
         }
+        /*  
+         * replace else with this line to complete the version with only Ifs, make the other "else if"s "if"
+         * if (grade != 'A' && grade != 'a' && grade != 'B' && grade != 'b'
+         *  && grade != 'C' && grade != 'c' && grade != 'D' && grade != 'd'
+         *   && grade != 'F' && grade != 'f')
+         * {
+         *    printf("%s", "Incorrect letter grade entered."); 
+         *    puts(" Enter a new grade.");
+         * }
+         */
     }
 
     // output summary of results
