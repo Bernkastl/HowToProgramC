@@ -9,7 +9,6 @@
  */
 
 #include <stdio.h>
-#include <math.h>
 
 int toCelsius(int);
 int toFahrenheit(int);
