@@ -24,35 +24,43 @@ int selectNumber(void);
 int main(void)
 {
     srand(time(NULL));
-    
-    int answer = selectNumber();
+    char playAgain;
 
-    printf("I have a number between 1 and 1000\n");
-    printf("Can you guess my number?\n");
-    printf("Please type your first guess:\n");
-
-    while (1)
+    do
     {
-        printf("Your guess: ");
-        int guess;
-        scanf("%d", &guess);
+        int answer = selectNumber();
 
-        if (guess == answer)
+        printf("I have a number between 1 and 1000\n");
+        printf("Can you guess my number?\n");
+        printf("Please type your first guess:\n");
+
+        while (1)
         {
-            printf("Excellent! You guessed the number!\n");
-            break;
+            printf("Your guess: ");
+            int guess;
+            scanf("%d", &guess);
+
+            if (guess == answer)
+            {
+                printf("Excellent! You guessed the number!\n");
+                break;
+            }
+            else if (guess < answer)
+            {
+                printf("Too low. Try again.\n");
+                continue;
+            }
+            else if (guess > answer)
+            {
+                printf("Too high. Try again.\n");
+                continue;
+            }
         }
-        else if (guess < answer)
-        {
-            printf("Too low. Try again.\n");
-            continue;
-        }
-        else if (guess > answer)
-        {
-            printf("Too high. Try again.\n");
-            continue;
-        }
-    }
+
+        printf("Would you like to play again (y or n)? ");
+        scanf(" %c", &playAgain);
+
+    } while (playAgain == 'y');
 }
 
 int selectNumber(void)
