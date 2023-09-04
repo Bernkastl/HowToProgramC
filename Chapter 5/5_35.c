@@ -13,10 +13,10 @@
 unsigned long long fibonacci(int);
 
 int main(void)
-{
-    for (int i = 1; i <= 100000; i++)
+{    
+    for (int i = 0; i <= 100000; i++)
     {
-        printf("%llu\n", fibonacci(i));
+        printf("fibonacci(%d) = %llu\n", i, fibonacci(i));
     }
 }
 
@@ -24,12 +24,12 @@ unsigned long long fibonacci(int number)
 {
     unsigned long long num1 = 0, num2 = 1, sum;
 
-    if (number == 1)
+    if (number == 0)
         return 0;
-    else if (number == 2)
+    else if (number == 1)
         return 1;
 
-    for (int i = 3; i <= number; i++)
+    for (int i = 2; i <= number; i++)
     {
         sum = num1 + num2;
         num1 = num2;
