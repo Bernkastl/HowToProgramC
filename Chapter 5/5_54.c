@@ -51,8 +51,11 @@ int main(void)
 void startRace(void)
 {
     printf("ON YOUR MARK, GET SET\n");
+    Sleep(500);
     printf("BANG             !!!!\n");
+    Sleep(500);
     printf("AND THEY'RE OFF  !!!!\n\n");
+    Sleep(500);
 }
 
 int generateNumber(void)
