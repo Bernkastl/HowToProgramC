@@ -29,10 +29,10 @@ int main(void)
     bool isOver;
 
     printField(harePosition, tortoisePosition);
+    Sleep(500);
 
     do
     {
-        Sleep(500);
         int hareStep = getHareStep();
         int tortoiseStep = getTortoiseStep();
 
@@ -40,6 +40,7 @@ int main(void)
         tortoisePosition = moveAnimal(tortoisePosition, tortoiseStep);
 
         printField(harePosition, tortoisePosition);
+        Sleep(500);
 
         isOver = isGameOver(harePosition, tortoisePosition);
 
