@@ -24,6 +24,7 @@ int main(void)
 {
     srand(time(NULL));
     int frequency[POSSIBLE] = {0};
+    int expected[POSSIBLE] = {0, 0, 1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1};
 
     for (size_t i = 1; i <= ROLLS; i++)
     {
@@ -32,11 +33,11 @@ int main(void)
     }
 
     printf("Results after 36000 double rolls\n");
-    printf("2\t3\t4\t5\t6\t7\t8\t9\t10\t11\t12\n");
+    printf("Result\tRolls\tExpected\tActual\n");
 
     for (size_t i = 2; i < POSSIBLE; i++)
     {
-        printf("%d\t", frequency[i]);
+        printf("%d\t%d\t%%%.3f\t%%%.3f\n", i, frequency[i], expected[i] / 36.0 * 100, (float)frequency[i] / ROLLS * 100);
     }
 }
 
